@@ -143,7 +143,25 @@ img{
 /* .flex-item a#my-special-id{
     background-image: url(../assets/images/custom-image-name.jpeg); 
 } */
+.flex-item a#termone{
+    background-image: url(../assets/images/term1.jpg); 
+}
 
+.flex-item a#one{
+    background-image: url(../assets/images/2.1.jpg); 
+}
+
+.flex-item a#two{
+    background-image: url(../assets/images/2.2.jpg); 
+}
+
+.flex-item a#three{
+    background-image: url(../assets/images/2.3.jpg); 
+}
+
+.flex-item a#four{
+    background-image: url(../assets/images/2.4.jpg); 
+}
 
 .flex-item a:hover{
     color:#bbbbbb;
