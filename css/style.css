@@ -163,6 +163,10 @@ img{
     background-image: url(../assets/images/2.4.jpg); 
 }
 
+.flex-item a#termtwo{
+    background-image: url(../assets/images/3.jpg); 
+}
+
 .flex-item a:hover{
     color:#bbbbbb;
     background-size: 120%;
