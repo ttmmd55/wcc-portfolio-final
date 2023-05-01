@@ -19,9 +19,9 @@
         </nav>
         <header class="documentation-header">
             <section class="center-text">
-                <h1>Work Title</h1>
-                <h2>by Your Name</h6>
-                <p>Write a one-sentence summary of what the project is.</p> 
+                <h1>Body paintbrush</h1>
+                <h2>Shuting Chen</h6>
+                <p>The participants' painting process is recorded on video, using their bodies to form the brushes.</p> 
             </section>
         </header>
 
@@ -33,23 +33,24 @@
             </section>
             <section>
                 <h3>Introduction</h3>
-                <p>Write a short introduction, a short paragraph, giving a bit more detail about what the project is.</p>
+                <p>The participants' painting process is recorded through camera videos using their bodies to form brushes, allowing them to immersing themselves in artistic creation and relieving stress from the mind. </p>
             </section>
             <section>
                 <h3>Concept and Background Research</h3>
                 
-                <p>Write about the concept behind the project, in other words the creative or theoretical inspiration. Include details about any background research you may have done (don’t forget to include references in the reference section).</p>
-                <p>Consider writing about your work in relation to a creative, theoretical or computational tradition that you may be taking inspiration from, in other words think about how your work is situated in a particular making tradition. </p>
+                <p>With the diversification of artistic healing mediums, the art of shared healing is gradually developing. The Art of Shared Healing (Arte Terapeutica Condivisa) originated in Italy and was inspired by classical Eastern culture and was born in China. it generally consists of a live workshop and an exhibition of artworks. The workshops provide a psychological release, stress relief, self-confidence and self-awareness, helping people to know themselves and take better care of themselves. The artworks created in the workshops are the product of artistic expressions that emanate the energy of the time together, decorating the environment and influencing the aura of that environment, and the results are displayed in various exhibitions and art spaces ( Zhongsheng Wang, 2022).</p>
+                <p>Painting healing is one of the methods of a psychological healing. Painting healing does not require any foundation in painting, it allows the painter to release the repressed emotions from the subconscious mind through painting, and in the process to continuously know themselves, break through, grow, tap into their potential, and open up their wisdom, thus living an infinite state of life. I am inspired by Daisy Parris's paintings, where she uses brush strokes to release her emotions, giving them weight and authenticity, an emotional expression (https://www.artsy.net/artist/daisy-parris). This extends to the approach of action painting, a term applied to artists from the 1940s to the early 1960s whose approach to painting emphasised the physical act of painting as an essential part of the finished work. Their process involved splashing, using gestural brushstrokes and dripping paint onto the canvas rather than carefully applying it. This physical act of painting through physical action is a ' savage' way of releasing one's emotions, direct and intense. Coincidentally, through research, I discovered that there is also a form of dance therapy, also known as movement therapy, in psychotherapy. The aim of movement therapy is to enhance a person's cognitive, physical, mental and emotional health. Movement therapy can include a variety of activities from stretching to free dance, encouraging people to express their feelings, thoughts and ideas through physical movement in a safe atmosphere(Koch,2014). Both approaches share a common core and require no foundation to achieve emotional release. </p>
+                <p>Therefore, I want to create a new medium for art healing, where I combined a variety of basic art healing techniques with technology to create a new form of art healing. The camera captures the movement of the limbs and generates the brushstrokes to be painted on the screen. A way of creating art that allows the participants to fully participate. If possible, I would like to use it in therapeutic art as a medium for creating art that involves the participant and allows the therapist to observe the participant's behaviour, thus helping the participant to perceive themselves and relieve stress. Multiple art therapies are combined to provide a meaningful and memorable experience for all participants.</p>
                 
                 <!-- if you have a full width image try make it not too tall -->
-                <img src="../assets/images/repeating-diagonal-lines-strip.jpeg"/>
+                <!-- <img src="../assets/images/repeating-diagonal-lines-strip.jpeg"/> -->
                 
             </section>
             <section>
                 <h3>Technical Implementation</h3>
 
                 <!-- example of styling for three images, you can write your own styling -->
-                <div class="flex-container flex-basis-third">
+                <!-- <div class="flex-container flex-basis-third">
                     <div class="flex-item">
                         <img src="../assets/images/repeating-diagonal-lines-square.jpeg"/>
                     </div>
@@ -59,22 +60,22 @@
                     <div class="flex-item">
                         <img src="../assets/images/repeating-diagonal-lines-square.jpeg"/>
                     </div>
-                </div>
+                </div> -->
                 
-                <p>Write about the process of implementing your project. What technical elements or hardware are involved in your system. Write about why you made certain technical or design decisions etc. </p>
+                <p>I looked for the key points for the hands and feet by learning ml5's PoseNet, but I found that I could only identify the wrists and ankles. So I created the starting point of the path by identifying the four key points for the left and right wrists and ankles and then formed coloured lines by moving the wrists and ankles. This fulfilled the condition of forming a brush with the body. I did not have a deep study of the definition of colour and just picked four random colours to represent different parts of the body. Due to the mirroring of the camera and computer screen, red represents the right wrist in the camera, green represents the left wrist in the camera, blue represents the right ankle in the camera and yellow represents the left ankle in the camera. Four path lines are formed in the computer screen, and participants can dance their hands and move their feet to form a path map. You can also click on the save button to save a photo of yourself and your body painting together. </p>
             
                 <!-- example of styling for three images, you can write your own styling -->
-                <div class="flex-container flex-basis-half">
+                <!-- <div class="flex-container flex-basis-half">
                     <div class="flex-item">
                         <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
                     </div>
                     <div class="flex-item">
                         <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- default flex item is for 4 & follows media query styling for home page -->
-                <div class="flex-container">
+                <!-- <div class="flex-container">
                     <div class="flex-item">
                         <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
                     </div>
@@ -87,18 +88,21 @@
                     <div class="flex-item">
                         <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
                     </div>
-                </div>
+                </div> -->
          
             </section>
             <section>
                 <h3>Reflection and Future Development</h3>
-                <p>Reflect on how the project went, what went well, what you learnt etc. Based on these reflections, conclude with how you would further develop this project if you were to make another version or how you would further develop your ideas.</p>
+                <p>PoseNet is very hard. I was able to iterate through a code about face detection drawing circles before I ended up with the current code. At first, I was anxious about not finding the key points for the hands and feet. I solved the problem when I found PoseNet and used the console to find the key points for the bones. Then, I converted drawing circles to drawing lines. Finally, I started to try to get four positions to draw lines at the same time. I found that this was not an easy thing to do and I tried step by step because I simply could not find the right code to learn. I then came up with the idea of creating a class and then the four positions would apply the class at the same time and eventually the code was completed. With a problem that I haven't solved perfectly. I think different participants would have to use a new canvas each time. I would like to have a button to clear the canvas directly, but I set this button and the lines on the canvas are not cleared, which causes the program to be reopened once for each new participant involved, which is very tedious. I think I need to think about how to fix this afterwards.</p>
+                <p>This is a project that involves art healing and I would like to put it in a shared healing workshop. I think it might need to be done in collaboration with someone in the relevant profession to see if it is feasible. From what I understand, in traditional art healing, the tools used in the painting may represent the emotions of the participants and the therapist has to make a judgement based on these factors, and I am not sure if my project can really help them. Therefore, I think this is a direction that can be investigated. Will the integration of art healing with computers advance the development of art healing mediums (healing styles)? I think I can explore and think about this.</p>
             </section>
             <section>
                 <h3>References</h3>
                 <ul>
-                    <li>Technical Reference example. Include link where possible.</li>
-                    <li>Conceptual Reference example. Include link where possible.</li>
+                    <li>[1]https://zhuanlan.zhihu.com/p/135011369</li>
+                    <li>[2]https://www.artsy.net/artist/daisy-parris</li>
+                    <li>[3]Koch, S. et al. (2014) ‘Effects of dance movement therapy and dance on health-related psychological outcomes: A meta-analysis’, The Arts in psychotherapy, 41(1), pp. 46–64. doi:10.1016/j.aip.2013.10.004.</li>
+                    <li>[4]https://github.com/laskafitzhugh/FacePainting</li>
                 </ul>
             </section>
         </main>
